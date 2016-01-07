@@ -30,6 +30,10 @@ public class LearningUserController {
 		
 		System.out.println("Get contextPath : "+request.getContextPath());
 		
+		
+		
+		
+		
 		System.out.println("Get RemoteUser : "+request.getRemoteUser());
 		
 		System.out.println("Get RemoteHost  : "+request.getRemoteHost());
