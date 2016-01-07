@@ -43,6 +43,11 @@ public class LearningUserController {
 						.password("Secure*123")
 						.build();
 		
+		
+		
+		
+		
+		
 		System.out.println("user {}   "+user);
 		
 		log.info("log : user {}   "+user);
