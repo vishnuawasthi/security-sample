@@ -3,6 +3,8 @@ package com.security.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import com.security.model.Employee;
 
 
 @Controller
+@Slf4j
 public class LearningUserController {
 
 	//@Autowired
@@ -30,10 +33,6 @@ public class LearningUserController {
 		
 		System.out.println("Get contextPath : "+request.getContextPath());
 		
-		
-		
-		
-		
 		System.out.println("Get RemoteUser : "+request.getRemoteUser());
 		
 		System.out.println("Get RemoteHost  : "+request.getRemoteHost());
@@ -46,8 +45,7 @@ public class LearningUserController {
 		
 		System.out.println("user {}   "+user);
 		
-		
-		
+		log.info("log : user {}   "+user);
 		Employee emp = new Employee();
 		emp.setId(1L);
 		modelAndView.setViewName("required");
