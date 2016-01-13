@@ -37,7 +37,7 @@ public class LearningUserController {
 		
 		System.out.println("Get RemoteHost  : "+request.getRemoteHost());
 		
-		User user = User.builder()
+/*		User user = User.builder()
 						.id(1L)
 						.username("admin@securities.com")
 						.password("Secure*123")
@@ -49,10 +49,25 @@ public class LearningUserController {
 		
 		System.out.println("user {}   "+user);
 		
-		log.info("log : user {}   "+user);
+		log.info("log : user {}   "+user);*/
 		Employee emp = new Employee();
 		emp.setId(1L);
 		modelAndView.setViewName("required");
 		return modelAndView;
 	}
+	
+	
+	@RequestMapping(value="/118n")
+	public ModelAndView i18n(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView modelAndView = new ModelAndView();
+		System.out.println("i18n() -  start ");
+		
+		
+		
+		modelAndView.setViewName("i18nExample");
+		System.out.println("i18n() -  end ");
+		return modelAndView;
+	}
+	
+	
 }
